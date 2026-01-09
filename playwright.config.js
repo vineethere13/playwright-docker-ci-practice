@@ -77,5 +77,11 @@ export default defineConfig({
   //   url: 'http://localhost:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
+
+  reporter: [
+  ['html'],
+  ['junit', { outputFile: 'test-results/junit.xml' }]
+],
+
 });
 

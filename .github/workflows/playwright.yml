@@ -25,3 +25,12 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+        - name: Upload JUnit results to Datadog
+     if: always()
+        uses: DataDog/junit-upload-github-action@v1
+    with:
+      api_key: ${{ secrets.DD_API_KEY }}
+      site: ${{ secrets.DD_SITE }}
+      service: playwright-ci
+      files: test-results/junit.xml
+
