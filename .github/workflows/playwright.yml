@@ -32,5 +32,6 @@ jobs:
         api_key: ${{ secrets.DD_API_KEY }}
         site: ${{ secrets.DD_SITE }}
         service: playwright-ci
+        env: ci
         files: test-results/junit.xml
 
