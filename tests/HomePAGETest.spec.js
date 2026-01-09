@@ -8,7 +8,7 @@ test('@ci Home Page',async ({page})=>{
 
     console.log('Page title is:', pageTitle);
 
-    await expect(page).toHaveTitle('STORE');
+    await expect(page).toHaveTitle('STORE1');
 
     const pageURL=page.url();
 
